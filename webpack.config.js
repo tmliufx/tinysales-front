@@ -5,8 +5,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); //独立打包
 const HtmlWebpackPlugin = require('html-webpack-plugin');          //html模板模块;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); //压缩CSS模块;
 
-console.log(envConfig.get('website.host'));
-
 module.exports = {
     context: path.resolve(__dirname, './src/'),  //设置原始文件目录;
     entry: {                                        //打包入口;

@@ -114,17 +114,20 @@ module.exports = {
         }),
         //独立打包css插件;
         new ExtractTextPlugin({
-            filename : '/dist/styles.css'                //设置最后css路径、名称;
+            filename : '/dist/bundle.css'                //设置最后css路径、名称;
         }),
         //压缩css（注:因为没有用style-loader打包到js里所以webpack.optimize.UglifyJsPlugin的压缩本身对独立css不管用）;
         new OptimizeCssAssetsPlugin({
-            assetNameRegExp: /\.css$/g,                //正则匹配后缀.css文件;
+            assetNameRegExp: /\.css$/,                //正则匹配后缀.css文件;
             cssProcessor: require('cssnano'),            //加载‘cssnano’css优化插件;
             cssProcessorOptions: { discardComments: {removeAll: true } }, //插件设置,删除所有注释;
             canPrint: true                             //设置是否可以向控制台打日志,默认为true;
         }),
         //webpack内置js压缩插件;
         new webpack.optimize.UglifyJsPlugin({
+            output: {
+                comments: false,  // remove all comments
+            },
             compress: {                               //压缩;
                 warnings: false                      //关闭警告;
             }
@@ -132,14 +135,19 @@ module.exports = {
         //webpack内置自动加载插件配合resolve.alias做全局插件;
         new webpack.ProvidePlugin({
             $: 'jquery'                              //文件里遇见‘$’加载jquery;
-        })
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+            },
+        }),
     ],
     devServer: {    //设置本地Server;
         contentBase: path.join(__dirname,'dist'),  //设置启动文件目录;
         port: 8080,      //设置端口号；
         compress: true, //设置gzip压缩;
-        //inline:true,  //开启更新客户端入口(可在package.json scripts 里设置 npm run xxx);
-        //hot: true    //设置热更新(可在package.json scripts 里设置 npm run xxx);
+        // inline:true,  //开启更新客户端入口(可在package.json scripts 里设置 npm run xxx);
+        // hot: true    //设置热更新(可在package.json scripts 里设置 npm run xxx);
     },
     resolve:{
         //设置可省略文件后缀名(注:如果有文件没有后缀设置‘’会在编译时会报错,必须改成' '中间加个空格。ps:虽然看起来很强大但有时候省略后缀真不知道加载是啥啊~);
@@ -149,7 +157,7 @@ module.exports = {
         //别名设置,主要是为了配和webpack.ProvidePlugin设置全局插件;
         alias: {
             //设置全局jquery插件;
-            jquery: path.resolve(__dirname,'../node_modules/jquery/dist/jquery.min.js') //绝对路径;
+            jquery: path.resolve(__dirname,'./node_modules/jquery/dist/jquery.min.js') //绝对路径;
         }
     }
 };

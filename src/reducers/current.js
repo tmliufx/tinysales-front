@@ -1,4 +1,4 @@
-import { actionTypes } from '../constants';
+import { userActionTypes } from '../constants';
 
 const initialState = {
     tabIndex: 0,
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function current(state = initialState, action = {}) {
     switch (action.type) {
-        case actionTypes.UPDATE_CURRENT:
+        case userActionTypes.UPDATE_CURRENT:
             return { ...state, ...action.current };
         default:
             return state;

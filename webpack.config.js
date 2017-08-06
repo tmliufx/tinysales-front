@@ -1,8 +1,11 @@
 const webpack = require('webpack');  //webpack模块;
 const path = require('path');         //node 路径模块;
+const envConfig = require('config');
 const ExtractTextPlugin = require("extract-text-webpack-plugin"); //独立打包css模块;
 const HtmlWebpackPlugin = require('html-webpack-plugin');          //html模板模块;
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); //压缩CSS模块;
+
+console.log(envConfig.get('website.host'));
 
 module.exports = {
     context: path.resolve(__dirname, './src/'),  //设置原始文件目录;
@@ -10,7 +13,7 @@ module.exports = {
         app: 'app.js',                            //打包js;
     },
     output: {                                        //打包出口;
-        publicPath: "http://localhost:8080/",        //配合devServer本地Server;
+        publicPath: envConfig.get('website.host'),        //配合devServer本地Server;
         path: path.resolve(__dirname, './dist/'),    //出口地址;
         filename: '[name].bundle.js',                //出口文件名;
     },

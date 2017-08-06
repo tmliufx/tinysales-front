@@ -1,0 +1,8 @@
+{
+  "dbProfile":{
+    "host":"localhost",
+    "port":2593,
+    "name":"tinysales",
+    "passwd":"111111"
+  }
+}

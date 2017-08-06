@@ -1,7 +1,7 @@
 import React from 'react'
 import { browserHistory, Router, Route, IndexRoute} from 'react-router'
-import Login from 'views/login'
-import Main from 'views/main'
+import Login from '../views/login'
+import Main from '../views/main'
 
 class AppRouter extends  React.Component{
     render(){

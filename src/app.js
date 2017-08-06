@@ -10,7 +10,7 @@ import configureStore from './store';
  */
 const store = configureStore();
 
-let rootElement = document.getElementById('root')
+let rootElement = document.getElementById('container')
 //我们需要做出两个变化，将 App 组件连接到 Redux
 //并且让它能够 dispatch actions 以及从 Redux store 读取到 state。
 //在渲染之前将根组件包装进 <Provider>

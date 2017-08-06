@@ -6,6 +6,7 @@ class Login extends React.PureComponent {
         this.state = {};
         this.handleClick = this.handleClick.bind(this);
     }
+
     static defaultProps = {
      name: 'Mary'  //定义defaultprops的另一种方式
     }

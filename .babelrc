@@ -4,5 +4,15 @@
     "react",
     "stage-0"
   ],
-  "plugins": ["transform-runtime","syntax-async-functions","syntax-decorators"]
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": true,
+      "regenerator": true
+    }],
+    "add-module-exports",
+    "transform-es2015-destructuring",
+    "transform-object-rest-spread",
+    "transform-async-to-generator"
+  ]
 }

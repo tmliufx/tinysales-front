@@ -10,6 +10,7 @@ module.exports = {
     entry: {                                        //打包入口;
         app: 'app.js',                            //打包js;
     },
+    devtool:'eval',
     output: {                                        //打包出口;
         publicPath: envConfig.get('website.host'),        //配合devServer本地Server;
         path: path.resolve(__dirname, './dist/'),    //出口地址;
@@ -21,7 +22,7 @@ module.exports = {
                 //正则匹配后缀.js文件;
                 test: /\.js|jsx$/,
                 //需要排除的目录
-                exclude: '/node_modules/',
+                //exclude: '/node_modules/',
                 //加载babel-loader转译es6
                 use: [{
                     loader: 'babel-loader'

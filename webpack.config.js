@@ -23,7 +23,9 @@ module.exports = {
                 test: /\.js|jsx$/,
                 //需要排除的目录
                 exclude: '/node_modules/',
-                include: [path.resolve(__dirname,'./src')],
+                include: [
+                    path.resolve(__dirname, "./src")
+                ],
                 //加载babel-loader转译es6
                 use: [{
                     loader: 'babel-loader'

@@ -19,7 +19,7 @@ class About extends React.PureComponent {
     }
 
     render() {
-        return <h1>Hello, {this.props.name}</h1>;
+        return <h1>Hellodsafasdf</h1>;
     }
 }
 

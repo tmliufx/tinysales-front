@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "window": true
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "no-restricted-syntax": "off",
+    "linebreak-style": "off",
+    "import/no-extraneous-dependencies": "off"
+  }
+}

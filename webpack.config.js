@@ -22,7 +22,8 @@ module.exports = {
                 //正则匹配后缀.js文件;
                 test: /\.js|jsx$/,
                 //需要排除的目录
-                //exclude: '/node_modules/',
+                exclude: '/node_modules/',
+                include: [path.resolve(__dirname,'./src')],
                 //加载babel-loader转译es6
                 use: [{
                     loader: 'babel-loader'

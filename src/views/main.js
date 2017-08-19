@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class Main extends React.PureComponent {
     constructor(props) {
@@ -19,7 +20,7 @@ class Main extends React.PureComponent {
     }
 
     render() {
-        return <h1>Hello, {this.props.name}</h1>;
+        return <Link to="/login">login1</Link>;
     }
 }
 

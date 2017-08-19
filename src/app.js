@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import AppRouter from './router/index'
 import configureStore from './store';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 /**
  * 创建store
  * @type {[type]}
@@ -15,7 +16,9 @@ let rootElement = document.getElementById('root')
 //这使得我们的 store 能为下面的组件所用
 render(
     <Provider store={configureStore} key="provider">
-        <AppRouter/>
+        <MuiThemeProvider>
+            <AppRouter/>
+        </MuiThemeProvider>
     </Provider>,
     rootElement
 );

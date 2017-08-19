@@ -1,5 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Home extends React.PureComponent {
     constructor(props) {
@@ -20,7 +21,7 @@ class Home extends React.PureComponent {
     }
 
     render() {
-        return <h1>Hello</h1>;
+        return <Link to="/login">login</Link>;
     }
 }
 

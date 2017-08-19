@@ -1,5 +1,8 @@
 import React from 'react'
-import { Route, Router } from 'react-router'
+import {
+    HashRouter as Router,
+    Route
+} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import Login from '../views/login'

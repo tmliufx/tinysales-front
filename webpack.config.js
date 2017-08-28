@@ -39,9 +39,7 @@ module.exports = {
                     //加载css-loader、postcss-loader（编译顺序从下往上）转译css
                     use: [
                         {
-                            loader : 'css-loader?importLoaders=1',
-
-                        },
+                            loader : 'css-loader',options:{ importLoaders:1 }},
                         {
                             loader : 'postcss-loader',
                             //配置参数;
@@ -49,10 +47,9 @@ module.exports = {
                                 //从postcss插件autoprefixer 添加css3前缀;
                                 plugins: function() {
                                     return [
+                                        require('postcss-import')(),
                                         //加载autoprefixer并配置前缀,可加载更多postcss插件;
-                                        require('autoprefixer')({
-                                            browsers: ['ios >= 7.0']
-                                        })
+                                        require("autoprefixer")({browsers:['last 5 versions']})
                                     ];
                                 }
                             }

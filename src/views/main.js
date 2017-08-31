@@ -12,4 +12,4 @@ class Main extends React.PureComponent {
     }
 }
 
-export default withRouter()(Main);
+export default withRouter(Main);

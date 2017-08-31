@@ -12,4 +12,4 @@ class Login extends React.PureComponent {
     }
 }
 
-export default withRouter()(Login);
+export default withRouter(Login);

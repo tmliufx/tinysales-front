@@ -2,14 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-About.propTypes = {
-    name: PropTypes.string
-};
-
-About.defaultProps = {
-    name: 'Mary'
-};
-
 class About extends React.PureComponent {
     constructor(props) {
         super(props);
@@ -21,4 +13,12 @@ class About extends React.PureComponent {
     }
 }
 
-export default withRouter()(About);
+About.propTypes = {
+    name: PropTypes.string
+};
+
+About.defaultProps = {
+    name: 'Mary'
+};
+
+export default withRouter(About);

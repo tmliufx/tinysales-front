@@ -1,27 +1,27 @@
-import React from 'react'
+import React from 'react';
 import {
     HashRouter as Router,
     Route
-} from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
+} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
-import Login from '../views/login'
-import Home from '../views/home'
-import About from '../views/about'
+import Login from '../views/login';
+import Home from '../views/home';
+import About from '../views/about';
 
 const history = createBrowserHistory()
 
-class AppRouter extends  React.Component{
-    render(){
+class AppRouter extends React.Component {
+    render() {
         return (
             <Router history={history}>
                 <div>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/login" component={Login}/>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/login" component={Login} />
                 </div>
             </Router>
-        )
+        );
     }
 }
 

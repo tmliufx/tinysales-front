@@ -7,7 +7,7 @@ const Platform = builder.Platform;
 const webpack = require('webpack');
 const fs = require('fs');
 const url = require('url');
-const webpackConfig = require("./webpack.config.js");
+const webpackConfig = require('./webpack.config.js');
 const OSS = require('ali-oss').Wrapper;
 
 const client = new OSS({
@@ -56,7 +56,7 @@ gulp.task('update-config', function () {
     result.env = env;
 
     // 刷新config.js
-    console.log('更新config.js');
+    //    console.log('更新config.js');
     let configData = 'module.exports = ' + JSON.stringify(result, null, 2) + ';';
     fs.writeFileSync('./config.js', configData);
 

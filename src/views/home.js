@@ -19,7 +19,7 @@ class Home extends React.PureComponent {
 
     render() {
         return (
-            <Link>{this.props.content}</Link>
+            <Link to="/about">{this.props.content}</Link>
         );
     }
 }
@@ -32,9 +32,10 @@ Home.defaultProps = {
     content: 'main content'
 };
 
-const mapStateToProps = (state, ownProps) => {
-    return { currentUser: state.currentUser }};
+const mapStateToProps = (state, ownProps) => ({
+    currentUser: state.currentUser
+});
 
-const mapDispatchToProps = (dispatch) => { bindActionCreators(action, dispatch); };
+const mapDispatchToProps = (dispatch) => ({ userActions: bindActionCreators(action, dispatch) });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

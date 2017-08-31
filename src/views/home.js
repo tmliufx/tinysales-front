@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { Link, withRouter } from 'react-router-dom';
+import { Layout } from 'antd';
 
 import * as action from '../actions/thunk-creator';
+const { Header, Content, Footer } = Layout;
 
 class Home extends React.PureComponent {
     constructor(props) {
@@ -19,7 +21,13 @@ class Home extends React.PureComponent {
 
     render() {
         return (
-            <Link to="/about">{this.props.content}</Link>
+            <Layout>
+                <Header>header</Header>
+                <Content>
+                    <Link to="/">{this.props.content}</Link>
+                </Content>
+                <Footer>footer</Footer>
+            </Layout>
         );
     }
 }

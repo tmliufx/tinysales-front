@@ -32,7 +32,8 @@ Home.defaultProps = {
     content: 'main content'
 };
 
-const mapStateToProps = (state, ownProps) => ({ currentUser: state.currentUser });
+const mapStateToProps = (state, ownProps) => {
+    return { currentUser: state.currentUser }};
 
 const mapDispatchToProps = (dispatch) => { bindActionCreators(action, dispatch); };
 

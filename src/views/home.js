@@ -5,33 +5,27 @@ import PropTypes from 'prop-types';
 
 import { Link, withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
-const { Header, Content, Footer } = Layout;
 
 import * as action from '../actions/thunk-creator';
+const { Header, Content, Footer } = Layout;
 
 class Home extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.state = {logged: false};
+        this.state = { logged: false };
         this.handleClick = this.handleClick.bind(this);
-    }
-    static defaultProps = {
-        name: 'Mary'  //定义defaultprops的另一种方式
-    }
-
-    static propTypes = {
-        name: React.PropTypes.string
     }
 
     handleClick() {
-        //点击事件的处理函数
     }
 
     render() {
         return (
             <Layout>
                 <Header>header</Header>
-                <Content>main content</Content>
+                <Content>
+                    <Link>{this.props.content}</Link>
+                </Content>
                 <Footer>footer</Footer>
             </Layout>
         );
@@ -39,21 +33,15 @@ class Home extends React.PureComponent {
 }
 
 Home.propTypes = {
-    name: PropTypes.string
+    content: PropTypes.string
 };
 
 Home.defaultProps = {
-    name: 'Mary'
+    content: 'main content'
 };
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        currentUser: state.currentUser
-    }
-}
+const mapStateToProps = (state, ownProps) => ({ currentUser: state.currentUser });
 
-const mapDispatchToProps = (dispatch)=>{
-    return bindActionCreators(action, dispatch);
-}
+const mapDispatchToProps = (dispatch) => { bindActionCreators(action, dispatch); };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

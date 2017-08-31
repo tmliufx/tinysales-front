@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { Link, withRouter } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 const { Header, Content, Footer } = Layout;
 
 import * as action from '../actions/thunk-creator';

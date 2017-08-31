@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import { Layout, Menu } from 'antd';
-const { Header, Content, Footer } = Layout;
-
 class Main extends React.PureComponent {
     constructor(props) {
         super(props);
@@ -25,15 +22,10 @@ class Main extends React.PureComponent {
 
     render() {
         return (
-            <Layout>
-            <Header>header</Header>
-            <Layout>
-                <Sider>left sidebar</Sider>
-                <Content><Link to="/login">login1</Link></Content>
-                <Sider>right sidebar</Sider>
-            </Layout>
-            <Footer>footer</Footer>
-        </Layout>
+            <div>
+                <li><Link to="/">main</Link></li>
+                <li><Link to="/about">about</Link></li>
+            </div>
         );
     }
 }

@@ -115,7 +115,7 @@ module.exports = {
         // 独立打包css插件;
         new ExtractTextPlugin({
             // 设置最后css路径、名称;
-            filename: '/dist/bundle.css'
+            filename: 'dist/bundle.css'
         }),
         // 压缩css（注:因为没有用style-loader打包到js里所以webpack.optimize.UglifyJsPlugin的压缩本身对独立css不管用）;
         new OptimizeCssAssetsPlugin({

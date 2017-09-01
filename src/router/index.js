@@ -5,9 +5,7 @@ import {
 } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
-import Login from '../views/login';
-import Home from '../views/home';
-import About from '../views/about';
+import Test from '../views/test';
 
 const history = createBrowserHistory()
 
@@ -16,9 +14,7 @@ class AppRouter extends React.Component {
         return (
             <Router history={history}>
                 <div>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/login" component={Login} />
+                    <Route exact path="/" component={Test} />
                 </div>
             </Router>
         );

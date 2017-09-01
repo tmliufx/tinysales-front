@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 const { Header, Footer, Content } = Layout;
 
 class LoginView extends React.PureComponent {
@@ -10,6 +10,7 @@ class LoginView extends React.PureComponent {
         return (
             <Layout>
                 <Header>
+                    <Icon type="shop" style={{ fontSize: '4em', color: '#fff' }} />
                     <Menu
                         theme="dark"
                         mode="horizontal"

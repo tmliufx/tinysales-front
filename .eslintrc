@@ -33,10 +33,10 @@
       "never"
     ],
     "indent": [2, 4],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+//    "linebreak-style": [
+//      "error",
+//      "unix"
+//    ],
     "no-tabs": 0,
     "no-param-reassign": [
       "error",

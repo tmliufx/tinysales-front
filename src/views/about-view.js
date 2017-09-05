@@ -12,11 +12,11 @@ class IndexView extends React.PureComponent {
         return (
             <Layout>
                 <Header>
-                    <Navigator defaultSelectedKey="1" />
+                    <Navigator defaultSelectedKey="3" />
                 </Header>
                 <Content style={{ minHeight: '800px' }} >
                     <div >
-                        index
+                        about
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

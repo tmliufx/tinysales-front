@@ -1,33 +1,26 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-import { Layout, Menu, Icon } from 'antd';
-const { Header, Footer, Content } = Layout;
+import { Layout } from 'antd';
+
+import Navigator from '../components/navigator';
+
+const { Header, Content, Footer } = Layout;
 
 class LoginView extends React.PureComponent {
     render() {
-        console.log(this.props);
         return (
             <Layout>
                 <Header>
-                    <Icon type="shop" style={{ fontSize: '4em', color: '#fff' }} />
-                    <Menu
-                        theme="dark"
-                        mode="horizontal"
-                        defaultSelectedKeys={['1']}
-                        style={{ lineHeight: '64px', marginTop: '0px' }}
-                    >
-                        <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
-                    </Menu></Header>
-                <Content style={{ padding: '0 50px' }}>
-                    <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-                        <Link to="/main">main</Link>
+                    <Navigator defaultSelectedKey="4" />
+                </Header>
+                <Content style={{ minHeight: '800px' }} >
+                    <div >
+                        login
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                    TinySales ©2016 Created by tmliufx
+                    自由贸易联合体 ©2017 Created by TinySales
                 </Footer>
             </Layout>
         );

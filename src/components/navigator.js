@@ -50,7 +50,7 @@ class Navigator extends React.PureComponent {
                         theme="dark"
                         mode="horizontal"
                         defaultSelectedKeys={[this.props.defaultSelectedKey]}
-                        style={{ lineHeight: '64px' }}
+                        style={{ lineHeight: '64px', margin: 0 }}
                         onClick={this.onClick}
                         onSelect={this.onSelect}
                     >

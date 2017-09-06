@@ -15,17 +15,15 @@ import RegisterView from '../views/register-view';
 class AppRouter extends React.Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <Route exact path="/" component={IndexView} />
-                    <Route exact path="/login" component={LoginView} />
-                    <Route exact path="/main" component={MainView} />
-                    <Route exact path="/about" component={AboutView} />
-                    <Route exact path="/tutorial" component={TutorialView} />
-                    <Route exact path="/register" component={RegisterView} />
-                    <Route exact path="/test" component={TestView} />
-                </div>
-            </Router>
+            <div>
+                <Route exact path="/" component={IndexView} />
+                <Route exact path="/login" component={LoginView} />
+                <Route exact path="/main" component={MainView} />
+                <Route exact path="/about" component={AboutView} />
+                <Route exact path="/tutorial" component={TutorialView} />
+                <Route exact path="/register" component={RegisterView} />
+                <Route exact path="/test" component={TestView} />
+            </div>
         );
     }
 }

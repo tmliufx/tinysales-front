@@ -1,28 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import { Layout } from 'antd';
-
-import Navigator from '../components/navigator';
-
-const { Header, Content, Footer } = Layout;
-
 class IndexView extends React.PureComponent {
     render() {
         return (
-            <Layout>
-                <Header>
-                    <Navigator defaultSelectedKey="1" />
-                </Header>
-                <Content style={{ minHeight: '800px' }} >
-                    <div >
-                        index
-                    </div>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    自由贸易联合体 ©2017 Created by TinySales
-                </Footer>
-            </Layout>
+            <div >
+                index
+            </div>
         );
     }
 }

@@ -1,13 +1,13 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import { Menu } from 'antd';
 
 const propTypes = {
     history: PropTypes.object.isRequired,
     defaultSelectedKey: PropTypes.string.isRequired
-}
+};
 
 class Navigator extends React.PureComponent {
     constructor(props) {
@@ -31,16 +31,17 @@ class Navigator extends React.PureComponent {
             break;
         case '3':
             history.push('/about');
-            break
+            break;
         case '4':
             history.push('/login');
-            break
+            break;
         default:
             break;
         }
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="banner">
                 <div className="banner logo" />

@@ -47,7 +47,6 @@ class Navigator extends React.PureComponent {
                 <div className="banner logo" />
                 <div className="banner menu">
                     <Menu
-                        theme="dark"
                         mode="horizontal"
                         defaultSelectedKeys={[this.props.defaultSelectedKey]}
                         style={{ lineHeight: '64px', margin: 0 }}

@@ -11,10 +11,10 @@ class IndexView extends React.PureComponent {
     render() {
         return (
             <Layout>
-                <Header>
+                <Header style={{ backgroundColor: '#fff' }}>
                     <Navigator defaultSelectedKey="1" />
                 </Header>
-                <Content style={{ minHeight: '800px' }} >
+                <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }} >
                     <div >
                         <AppRouter />
                     </div>
